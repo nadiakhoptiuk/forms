@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <form class="form" autocomplete="off">
+        <label class="label">
+            Ім'я
+            <input class="input" type="text" autofocus>
+        </label>
+
+        <label class="label">
+            Телефон
+            <input class="input" type="tel">
+        </label>
+
+        <label class="label">
+            E-mail
+            <input class="input" type="email" autocomplete="on">
+        </label>
+
+        <!-- Theme -->
+        <p>Вибери тему доповіді:</p>
+        <div role="group">
+            <label class="label checkbox">
+                <input type="checkbox" name="theme" value="html">
+                HTML
+            </label>
+            
+            <label class="label checkbox">
+                <input type="checkbox" name="theme" value="css">
+                CSS
+            </label>
+            
+            <label class="label checkbox">
+                <input type="checkbox" name="theme" value="js">
+                Java Script
+            </label>
+        </div>
+
+        <!-- Experience -->
+        <p>Вибери свій професійний рівень:</p>
+        <div role="group">
+            <label>
+                <input type="radio" value="junior" name="experience">
+                Junior
+            </label>
+            
+            <label>
+                <input type="radio" value="middle" name="experience">
+                Middle
+            </label>
+            
+            <label>
+                <input type="radio" value="senior" name="experience">
+                Senior
+            </label>
+        </div>
+
+        <input type="date" name="" min="2022-02-24">
+        <input type="datetime-local" name="" min="2022-02-24T22:39" max="2023-02-24">
+        <input type="time" min="12:30" max="01:04">
+
+        <textarea name="" id="" cols="0" rows="5"></textarea>
+
+        <button type="submit">Оставить заявку</button>
+    </form>
+</body>
+</html>
