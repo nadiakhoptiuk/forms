@@ -1,3 +1,7 @@
+:root {
+  --border-color: rgb(231, 48, 161);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -43,6 +47,7 @@
 }
 
 .theme-option {
+  width: ;
   margin-right: 10px;
 }
 
@@ -65,7 +70,7 @@
 }
 
 .input:focus {
-  border-color: rgb(76, 48, 231);
+  border-color: var(--border-color);
   outline: none;
 }
 
@@ -82,13 +87,52 @@
 
 .label.checkbox:checked .option:before,
 .label.radio:checked .option:before {
-  background-color: rgb(76, 48, 231);
+  background-color: var(--border-color);
 }
 
-/* .input-checkbox:focus {
-  border-color: rgb(59, 52, 109);
-  outline: none;
-} */
+.input-checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.option:before {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(50%);
+  width: 11px;
+  height: 11px;
+  content: "";
+  display: inline-block;
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 3px;
+}
+
+.option {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.input-checkbox:checked + .option:before {
+  background-image: url("../images/checkbox.svg");
+  background-color: var(--border-color);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--border-color);
+}
+
+.input-checkbox:focus + .option:before {
+  border: 1px solid var(--border-color);
+}
 
 .input.date {
   font-family: inherit;
@@ -107,7 +151,7 @@
 }
 
 .policy-checkbox {
-  /* position: absolute; */
+  position: absolute;
   white-space: nowrap;
   width: 1px;
   height: 1px;
@@ -121,9 +165,8 @@
 
 .policy-label:before {
   position: absolute;
-  left: -16px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-120%, -50%);
   width: 11px;
   height: 11px;
   content: "";
@@ -135,18 +178,19 @@
 .policy-label {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .policy-checkbox:checked + .policy-label:before {
   background-image: url("../images/checkbox.svg");
-  background-color: rgb(76, 48, 231);
+  background-color: var(--border-color);
   background-size: contain;
   background-origin: border-box;
-  border-color: rgb(76, 48, 231);
+  border-color: var(--border-color);
 }
 
 .policy-checkbox:focus + .policy-label:before {
-  border: 2px solid rgb(76, 48, 231);
+  border: 1px solid var(--border-color);
 }
 
 .button {
