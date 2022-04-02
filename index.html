@@ -8,68 +8,99 @@
 
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="page">
     <form class="form" autocomplete="off">
         <label class="label">
-            Ім'я
-            <input class="input" type="text" autofocus>
+            <p class="field-name first">Ім'я та прізвище</p>
+            <input class="input" type="text" placeholder="Іван Іваненко" autofocus>
         </label>
 
         <label class="label">
-            Телефон
-            <input class="input" type="tel">
+            <p class="field-name">Телефон</p>
+            <input class="input" type="tel" placeholder="+38 (09*) ***-**-**">
         </label>
 
         <label class="label">
-            E-mail
-            <input class="input" type="email" autocomplete="on">
+            <p class="field-name">E-mail</p>
+            <input class="input" type="email" placeholder="example@mail.com" autocomplete="on">
         </label>
 
         <!-- Theme -->
-        <p>Вибери тему доповіді:</p>
+        <p class="field-name">Тема доповіді</p>
         <div role="group">
-            <label class="label checkbox">
-                <input type="checkbox" name="theme" value="html">
-                HTML
-            </label>
-            
-            <label class="label checkbox">
-                <input type="checkbox" name="theme" value="css">
-                CSS
-            </label>
-            
-            <label class="label checkbox">
-                <input type="checkbox" name="theme" value="js">
-                Java Script
-            </label>
+            <ul class="theme list">
+                <li class="theme-option">
+                    <label class="label checkbox">
+                        <input class="input-checkbox" type="checkbox" name="theme" value="html">
+                        <span class="option">HTML</span>
+                    </label>
+                </li>
+
+                <li class="theme-option">
+                    <label class="label checkbox">
+                        <input class="input-checkbox" type="checkbox" name="theme" value="css">
+                        <span class="option">CSS</span>
+                    </label>
+                </li>
+
+                <li class="theme-option">
+                    <label class="label checkbox">
+                        <input class="input-checkbox" type="checkbox" name="theme" value="js">
+                        <span class="option">Java Script</span>
+                    </label>
+                </li>
+            </ul>
         </div>
 
         <!-- Experience -->
-        <p>Вибери свій професійний рівень:</p>
+        <p class="field-name">Твій професійний рівень</p>
         <div role="group">
-            <label>
-                <input type="radio" value="junior" name="experience">
-                Junior
-            </label>
-            
-            <label>
-                <input type="radio" value="middle" name="experience">
-                Middle
-            </label>
-            
-            <label>
-                <input type="radio" value="senior" name="experience">
-                Senior
-            </label>
+            <ul class="experience list">
+                <li>
+                    <label class="label radio">
+                        <input type="radio" value="junior" name="experience" checked>
+                        <span class="option">Junior</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="label radio">
+                        <input type="radio" value="middle" name="experience">
+                        <span class="option">Middle</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="label radio">
+                        <input type="radio" value="senior" name="experience">
+                        <span class="option">Senior</span>
+                    </label>
+                </li>
+            </ul>
         </div>
 
-        <input type="date" name="" min="2022-02-24">
-        <input type="datetime-local" name="" min="2022-02-24T22:39" max="2023-02-24">
-        <input type="time" min="12:30" max="01:04">
+        <!-- Date -->
+        <label class="label">
+            <p class="field-name">Дата доповіді</p>
+            <input class="input date" type="date" name="date" min="2022-02-24">
+        </label>
+        
+        <!-- Comment -->
+        <p class="field-name">Коментар</p>
+        <textarea class="input textarea" name="comment" rows="5" placeholder="Залиш коментар..." ></textarea>
 
-        <textarea name="" id="" cols="0" rows="5"></textarea>
+        <div class="policy-field">
+            <input class="policy-checkbox" type="checkbox" name="checkbox" id="policy">
+            <label class="policy-label" for="policy">
+                <span>Погоджуюся з </span>
+                <a href=""> Умовами участі</a></label>
+        </div>
+        
+        
 
-        <button type="submit">Оставить заявку</button>
+        <div class="button-field">
+            <button class="button" type="submit">Залишити заявку</button>
+        </div>
     </form>
 </body>
 </html>
