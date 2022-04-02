@@ -10,24 +10,25 @@
 </head>
 <body class="page">
     <form class="form" autocomplete="off">
-        <label class="label">
+        <label class="label name"> 
+            <input class="input name" type="text" placeholder=" ">
             <p class="field-name first">Ім'я та прізвище</p>
-            <input class="input" type="text" placeholder="Іван Іваненко" autofocus>
         </label>
 
-        <label class="label">
-            <p class="field-name">Телефон</p>
-            <input class="input" type="tel" placeholder="+38 (09*) ***-**-**">
+        <label class="label name">
+            <input class="input name" type="tel" placeholder=" ">
+            <p class="field-name first">Телефон</p>
         </label>
 
-        <label class="label">
-            <p class="field-name">E-mail</p>
-            <input class="input" type="email" placeholder="example@mail.com" autocomplete="on">
+        <label class="label name">
+            <input class="input name" type="email" placeholder=" " autocomplete="on">
+            <p class="field-name first">E-mail</p>
         </label>
 
         <!-- Theme -->
-        <p class="field-name">Тема доповіді</p>
-        <div role="group">
+        
+        <div role="group" class="theme-field">
+            <p class="field-name">Тема доповіді</p>
             <ul class="theme list">
                 <li class="theme-option">
                     <label class="label checkbox">
@@ -53,8 +54,9 @@
         </div>
 
         <!-- Experience -->
-        <p class="field-name">Твій професійний рівень</p>
-        <div role="group">
+        
+        <div role="group" class="experience-field">
+            <p class="field-name">Твій професійний рівень</p>
             <ul class="experience list">
                 <li>
                     <label class="label radio">

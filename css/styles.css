@@ -13,23 +13,43 @@
   font-size: 16px;
 }
 
+.form {
+  width: 500px;
+  padding: 30px;
+  margin: 0 auto;
+
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 3px;
+}
+
 .field-name {
   margin-top: 10px;
   margin-bottom: 3px;
 }
 
 .field-name.first {
-  margin-top: 0;
-  margin-bottom: 3px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  transition: transform 300ms linear, color 300ms linear;
 }
 
-.form {
-  width: 500px;
-  padding: 20px;
-  margin: 0 auto;
+.label.name {
+  position: relative;
+  margin-bottom: 30px;
+}
 
-  border: 1px solid rgb(184, 184, 184);
-  border-radius: 3px;
+.input.name:focus + .field-name.first,
+.input.name:not(:placeholder-shown) + .field-name.first {
+  transform: translateY(-200%);
+  color: var(--border-color);
+}
+
+.input.name::placeholder {
+  color: #ffffff;
 }
 
 .label {
@@ -44,6 +64,10 @@
 
 .theme.list {
   display: flex;
+}
+
+.theme-field:focus-within .field-name {
+  color: var(--border-color);
 }
 
 .theme-option {
@@ -118,6 +142,14 @@
   border: 1px solid var(--border-color);
 }
 
+.experience-field:focus-within .field-name {
+  color: var(--border-color);
+}
+
+.input-radio:checked + .radio-option {
+  color: var(--border-color);
+}
+
 /* Styles of checkboxes list */
 .input-checkbox {
   position: absolute;
@@ -161,6 +193,10 @@
 
 .input-checkbox:focus + .checkbox-option:before {
   border: 1px solid var(--border-color);
+}
+
+.input-checkbox:checked + .checkbox-option {
+  color: var(--border-color);
 }
 
 .input.date {
