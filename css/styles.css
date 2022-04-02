@@ -73,6 +73,8 @@
   outline: none;
 }
 
+/* Styles of radio-buttons */
+
 .input-radio {
   position: absolute;
   white-space: nowrap;
@@ -87,10 +89,17 @@
 }
 
 .radio-option:before {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(-25%);
   display: inline-block;
   content: "";
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid rgb(184, 184, 184);
 }
 
 .input-radio:checked + .radio-option:before {
@@ -105,6 +114,7 @@
   border: 1px solid var(--border-color);
 }
 
+/* Styles of checkboxes list */
 .input-checkbox {
   position: absolute;
   white-space: nowrap;
@@ -147,27 +157,6 @@
 
 .input-checkbox:focus + .checkbox-option:before {
   border: 1px solid var(--border-color);
-}
-
-.radio-option:before {
-  width: 11px;
-  height: 11px;
-  content: "";
-  border-radius: 50%;
-
-  /* position: relative; */
-  top: 0;
-  left: 0;
-  transform: translate(-25%);
-  width: 11px;
-  height: 11px;
-  content: "";
-  display: inline-block;
-  border: 1px solid rgb(184, 184, 184);
-}
-
-.input-radio:checked + .radio-option:before {
-  background-color: var(--border-color);
 }
 
 .input.date {
@@ -240,7 +229,7 @@
 
 .button:hover,
 .button:focus {
-  background-color: rgb(184, 184, 184);
+  background-color: var(--border-color);
   color: rgb(255, 255, 255);
   box-shadow: 1px 2px 2px rgb(158, 158, 158), -1px 3px 2px rgb(158, 158, 158);
 }
